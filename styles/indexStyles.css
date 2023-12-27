@@ -1,0 +1,491 @@
+
+.question-box{
+    width: 500px;
+    height: auto;
+    margin: 20px;
+    border: 1px solid black;
+}
+#play{
+    width: 300px;
+    height: 50px;
+    font-size: 2rem;
+}
+#no-ready{
+    width: 300px;
+    height: 50px;
+    font-size: 2rem;
+    margin: 20px;
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#display-text{
+    font-size: 3rem;
+}
+#h1Start {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    box-shadow: 2px 2px;
+}
+
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 35px;
+}
+
+body {
+    position: relative;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(78, 110, 180);
+}
+
+#question {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -200px; /* Adjust the margin as needed */
+}
+
+.btn {
+    margin: 15px;
+    width: 1000px;
+    height: 60px;
+    font-size: 16px;
+    border-radius:100px;
+    
+}
+
+.hud-prefix{
+    font-size: 2rem;
+    
+}
+#hud{
+    width: 100%;
+    height: 100%;
+}
+.hud-item {
+    width: 80%;
+    margin: 20px auto 0; /* Adjust the margin-top as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hud-main-text{
+    text-align: right;
+    margin-top:  -75px;
+    margin-right: 50px; 
+}
+#progressText{
+    text-align: left;
+    
+}
+
+#progressBar{
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgb(11, 223, 36);
+    border-radius: 50px;
+    overflow: hidden;
+
+}
+.progress{
+    width: 100%;
+    height: 0%;
+}
+
+
+#progressBarFull{
+    height: 100%;
+    background: rgb(11,223,36);
+    width: 0%;
+}
+.btn:hover{
+    cursor:pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6,103,247,0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+.box-container {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 1200px;
+    height: 600px;
+    left: 0;
+    right: 0;
+    top: 500%;
+    bottom: 30%;
+    margin: auto;
+}
+.mainBox{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+#box1 {
+    background-color: rgb(230, 229, 229);
+    z-index: 3;
+}
+#box2 {
+    background-color: #17773f;
+    z-index: 2;
+    transform: rotateZ(3deg);
+}
+#box3 {
+    background-color: rgb(184, 52, 52);
+    z-index: 1;
+    transform: rotateZ(-3deg);
+}
+
+@media (min-width: 150px) and (max-width: 480px) {
+    .box {
+        margin-top: -400px;
+        width: 300px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 300px; 
+        margin: 20px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .options {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .quiz{
+        margin-top: 350px;
+        font-size: 1px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+    .box {
+        margin-top: -400px;
+        width: 500px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 500px; 
+        margin: 20px;
+        height: 70px;
+        font-size: 14px;
+    }
+
+    .options {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .quiz{
+        margin-top: 550px;
+    }
+}
+
+
+@media (max-width: 1024px)  {
+    .box {
+        margin-top: -350px;
+        width: 700px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 700px; 
+        margin: 30px;
+        height: 90px;
+        font-size: 14px;
+    }
+
+    .options {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .quiz{
+        margin-top: 725px;
+    }
+}
+
+@media (max-width: 1190px)  {
+    .box {
+        margin-top: -300px;
+        width: 1000px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 1000px; 
+        margin: 50px;
+        height: 120px;
+        font-size: 35px;
+    }
+
+    .options {
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .quiz{
+        margin-top: 1000px;
+    }
+}
+
+@media (max-width: 1000px)  {
+    .box {
+        border: 1px solid black;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+        border-radius: 10px;
+        width: 1000px;
+        height: 500px;
+        left: 0;
+        right: 0;
+        top: 320%;
+        bottom: 30%;
+        margin-top:  -65px ;
+    }
+
+    .btn {
+        margin: 15px;
+        width: 800px;
+        height: 40px;
+        font-size: 16px;
+        border-radius:100px
+    }
+
+    .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -300px; /* Adjust the margin as needed */
+    }
+    
+    
+    .hud-item {
+        width: 80%;
+    margin: 10px auto 0; /* Adjust the margin-top as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#h1Start {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    box-shadow: 2px 2px;
+    }
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    #progressBar{
+        width: 20rem;
+        height: 1.5rem;
+        border: 0.2rem solid rgb(11, 223, 36);
+        border-radius: 50px;
+        overflow: hidden;
+    
+    }
+    #progressText{
+        text-align: left;
+        font-size: 28px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1400px) {
+    #h1Start {
+        height: 50px;
+    }
+    
+    h1 {
+        font-size: 30px;
+        margin-top: 5px;
+    }
+    
+    body {
+        position: relative;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: rgb(78, 110, 180);
+    }
+    
+    #question {
+        font-size: 30px;
+        margin-bottom: 200px;
+    }
+    
+    
+    .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -300px; /* Adjust the margin as needed */
+    }
+    
+    .btn {
+        margin: 10px;
+        width: 800px;
+        height: 50px;
+        font-size: 16px;
+        border-radius:100px;
+        
+    }
+    
+    .hud-prefix{
+        font-size: 2rem;
+    }
+    #hud{
+        width: 100%;
+        height: 100%;
+    }
+    .hud-item {
+        width: 80%;
+        margin: 20px auto 0; /* Adjust the margin-top as needed */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hud-main-text{
+        text-align: right;
+        margin-top:  -75px;
+        margin-right: 50px; 
+    }
+    #progressText{
+        text-align: left;
+        
+    }
+    
+    #progressBar{
+        width: 20rem;
+        height: 2rem;
+        border: 0.2rem solid rgb(11, 223, 36);
+        border-radius: 50px;
+        overflow: hidden;
+    
+    }
+    .progress{
+        width: 100%;
+        height: 0%;
+    }
+    
+    
+    #progressBarFull{
+        height: 100%;
+        background: rgb(11,223,36);
+        width: 0%;
+    }
+    .btn:hover{
+        cursor:pointer;
+        box-shadow: 0 0.4rem 1.4rem 0 rgba(6,103,247,0.5);
+        transform: scale(1.02);
+        transform: transform 100ms;
+    }
+    
+    .correct {
+        background-color: green;
+    }
+    
+    .incorrect {
+        background-color: red;
+    }
+    .box-container {
+        position: relative;
+    }
+    
+    .box {
+        position: absolute;
+        border: 1px solid black;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom:-340px;
+        text-align: center;
+        border-radius: 10px;
+        width: 1000px;
+        height: 500px;
+        left: 0;
+        right: 0;
+        top: 500%;
+        bottom: 30%;
+    }
+}
