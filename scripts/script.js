@@ -72,8 +72,10 @@ checkAnswer = (selectedAnswer) => {
     if (!acceptingAnswer) return;
     acceptingAnswer = false;
 
+    //När en fråga är besvarad eller timer = 0, tas timern för den frågan bort 
     clearInterval(counters[questionCounter - 1]);
 
+    // Om svaret stämmer får den klassen correct och knappen blir grön annars röd
     let classToApply = selectedAnswer == currentQuestion.correctAnswer ? 'correct' : 'incorrect';
 
     if (classToApply === 'correct') {
@@ -144,7 +146,7 @@ displayResults = () => {
     timeCount.style.visibility = 'hidden';
 
     const correctAnswers = score;
-    gameResultText.innerText = ` Correct Answers: ${correctAnswers} of ${MAX_QUESTIONS}`;
+    gameResultText.innerText = `Antal rätt: ${correctAnswers} av ${MAX_QUESTIONS}`;
 
     buttons.forEach((btn) => {
         if (btn) {
